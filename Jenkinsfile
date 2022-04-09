@@ -12,6 +12,12 @@ pipeline {
     stages {
         stage ('git') {
             steps {
+                dir('A') {
+                    git url: 'https://github.com/alendwahida/sosial-media.git'
+                }
+                dir('B') {
+                    git url: 'https://github.com/alendwahida/gitops-test.git'
+                }
                 sh 'ls'
                 sh 'git log'
                 sh 'printenv'
