@@ -7,7 +7,6 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'
         AWS_ID = '128150454185'
-        GIT_COMMIT = $GIT_COMMIT
         PROJECT_NAME = 'sosialmedia'
     }
     stages {
