@@ -35,7 +35,7 @@ pipeline {
         }
         stage ('Manifest Image Version into deployment.yaml') {
             steps {
-                sh "$GIT_COMIT"
+                sh '$GIT_COMIT'
             }
         }
     }
