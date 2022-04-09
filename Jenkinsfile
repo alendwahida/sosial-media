@@ -33,9 +33,9 @@ pipeline {
                 sh 'docker tag ${AWS_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}:$GIT_COMMIT ${AWS_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${PROJECT_NAME}:latest'
             }
         }
-        stage ('Deployment Images EKS') {
+        stage ('Manifest Image Version into deployment.yaml') {
             steps {
-                sh "docker version"
+                sh "$GIT_COMIT"
             }
         }
     }
