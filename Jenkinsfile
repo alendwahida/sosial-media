@@ -13,10 +13,10 @@ pipeline {
         stage ('git') {
             steps {
                 dir('A') {
-                    git url: 'https://github.com/alendwahida/sosial-media.git'
+                    git url: 'https://github.com/alendwahida/sosial-media.git', credentialsId: '1'
                 }
                 dir('B') {
-                    git url: 'https://github.com/alendwahida/gitops-test.git'
+                    git url: 'https://github.com/alendwahida/gitops-test.git', credentialsId: '1'
                 }
                 sh 'ls'
                 sh 'git log'
