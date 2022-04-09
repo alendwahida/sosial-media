@@ -12,9 +12,6 @@ pipeline {
     stages {
         stage ('git') {
             steps {
-                dir(projectdevops) {
-                    git url: 'https://github.com/alendwahida/k8s-simple-project-with-kong.git'
-                }
                 sh 'ls'
                 sh 'git log'
                 sh 'printenv'
