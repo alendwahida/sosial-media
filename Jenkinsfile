@@ -12,7 +12,7 @@ pipeline {
         }
         stage ('aws ecr') {
             steps {
-                sh("eval $(sudo aws ecr get-login --region us-east-1 | sed 's/ \-e none//' | sed 's|https://||')")
+                sh 'eval $(sudo aws ecr get-login --region $AWS_REGION | sed 's/ \-e none//' | sed 's|https://||')'
             }
         }
         stage ('docker Build') {
