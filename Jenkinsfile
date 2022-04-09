@@ -12,7 +12,7 @@ pipeline {
         }
         stage ('aws ecr') {
             steps {
-                sh("eval \$(aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 128150454185.dkr.ecr.us-east-1.amazonaws.com)")
+                sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 128150454185.dkr.ecr.us-east-1.amazonaws.com'
             }
         }
         stage ('docker Build') {
