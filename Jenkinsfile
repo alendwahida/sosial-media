@@ -23,8 +23,8 @@ pipeline {
         }
         stage ('docker Push ECR') {
             steps {
-                sh 'docker tag sosialmedia:latest 128150454185.dkr.ecr.us-east-1.amazonaws.com/sosialmedia:$CI_COMMIT_SHA'
-                sh 'docker push 128150454185.dkr.ecr.us-east-1.amazonaws.com/sosialmedia:$CI_COMMIT_SHA'
+                sh 'docker tag sosialmedia:latest 128150454185.dkr.ecr.us-east-1.amazonaws.com/sosialmedia:$GIT_COMMIT'
+                sh 'docker push 128150454185.dkr.ecr.us-east-1.amazonaws.com/sosialmedia:$GIT_COMMIT'
             }
         }
         stage ('Deployment Images EKS') {
