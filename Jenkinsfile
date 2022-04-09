@@ -12,7 +12,7 @@ pipeline {
         }
         stage ('aws ecr') {
             steps {
-                sh("eval \$(aws ecr get-login --no-include-email | sed 's|https://||')")
+                sh("eval \$(aws ecr get-login --no-include-email)")
             }
         }
         stage ('docker Build') {
