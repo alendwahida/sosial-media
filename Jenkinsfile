@@ -13,7 +13,6 @@ pipeline {
         stage ('git') {
             steps {
                 sh 'ls'
-                sh 'git log'
                 sh 'printenv'
             }
         }
