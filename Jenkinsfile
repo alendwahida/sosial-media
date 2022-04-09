@@ -8,6 +8,7 @@ pipeline {
         stage ('git') {
             steps {
                 sh 'git log'
+                sh 'printenv'
             }
         }
         stage ('ECR Login') {
