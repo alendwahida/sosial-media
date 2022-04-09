@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         AWS_REGION = 'us-east-1'
-        AWS_ID = '128150454185'
+        AWS_ID = '1454185'
         PROJECT_NAME = 'sosialmedia'
         a = 'taeddast'
     }
