@@ -10,9 +10,9 @@ pipeline {
                 sh 'docker version'
             }
         }
-        stage ('pull Github') {
+        stage ('aws ecr') {
             steps {
-                sh 'git --version'
+                sh 'aws ecr'
             }
         }
         stage ('docker Build') {
