@@ -8,7 +8,7 @@ pipeline {
         AWS_REGION = 'us-east-1'
         AWS_ID = '1454185'
         PROJECT_NAME = 'sosialmedia'
-        a = 'taeddast'
+        a = 'taedsadast'
     }
     stages {
         stage ('git') {
