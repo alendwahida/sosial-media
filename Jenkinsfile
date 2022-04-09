@@ -7,17 +7,12 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'
         AWS_ID = '128150454185'
+        GIT_COMMIT = $GIT_COMMIT
         PROJECT_NAME = 'sosialmedia'
     }
     stages {
         stage ('git') {
             steps {
-                dir('A') {
-                    git url: 'https://github.com/alendwahida/sosial-media.git', credentialsId: '1'
-                }
-                dir('B') {
-                    git url: 'https://github.com/alendwahida/gitops-test.git', credentialsId: '1'
-                }
                 sh 'ls'
                 sh 'git log'
                 sh 'printenv'
@@ -42,7 +37,8 @@ pipeline {
         }
         stage ('Manifest Image Version into deployment.yaml') {
             steps {
-                sh '$GIT_COMIT'
+                echo "Update manifest job"
+                build job: 'updatemanifest-sosialmedia', parameters: [string(name: 'DOCKERTAG', value: env.GIT_COMMIT)]
             }
         }
     }
