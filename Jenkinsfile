@@ -37,7 +37,7 @@ pipeline {
         stage ('Manifest Image Version into deployment.yaml') {
             steps {
                 echo "Update manifest job"
-                build job: 'updatemanifest-sosialmedia', parameters: [string(name: 'DOCKERTAG', value: env.AWS_REGION)]
+                build job: 'updatemanifest-sosialmedia', parameters: [string(name: 'DOCKERTAG', value: env.GIT_COMMIT)]
             }
         }
     }
