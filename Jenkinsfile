@@ -12,6 +12,8 @@ pipeline {
     stages {
         stage ('git') {
             steps {
+                sh 'mkdir A'
+                sh 'mkdir B'
                 dir('A') {
                     git url: 'https://github.com/alendwahida/sosial-media.git', credentialsId: '1'
                 }
