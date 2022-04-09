@@ -12,7 +12,7 @@ pipeline {
         }
         stage ('aws ecr') {
             steps {
-                sh 'aws ecr'
+                sh 'aws ecr get login'
             }
         }
         stage ('docker Build') {
