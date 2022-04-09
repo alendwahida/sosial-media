@@ -12,7 +12,7 @@ pipeline {
         }
         stage ('aws ecr') {
             steps {
-                sh("eval \$(aws ecr get-login)")
+                sh("eval \$(aws ecr get-login-password --region us-east-1)")
             }
         }
         stage ('docker Build') {
