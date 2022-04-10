@@ -22,7 +22,7 @@ pipeline {
                 sh 'docker tag $AWS_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$PROJECT_NAME:$GIT_COMMIT $AWS_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$PROJECT_NAME:latest'
             }
         }
-        stage ('Manifest Image Version into deployment.yaml') {
+        stage ('Manifest Image Version into Ops Repository') {
             steps {
                 echo "Update manifest job"
                 build job: '001-staging-updatemanifest-sosialmedia', 
