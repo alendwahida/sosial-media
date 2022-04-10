@@ -8,15 +8,8 @@ pipeline {
         AWS_REGION = 'us-east-1'
         AWS_ID = '128150454185'
         PROJECT_NAME = 'sosialmedia'
-        a = 'aj'
     }
     stages {
-        stage ('git') {
-            steps {
-                sh 'ls'
-                sh 'printenv'
-            }
-        }
         stage ('ECR Login') {
             steps {
                 sh 'aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${AWS_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com'
