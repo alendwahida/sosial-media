@@ -24,7 +24,7 @@ pipeline {
         }
         stage ('Manifest Image Version into deployment.yaml') {
             steps {
-                echo "Update manifest job1"
+                echo "Update manifest job"
                 build job: '001-staging-updatemanifest-sosialmedia', 
                     parameters: [
                         string(name: 'IMAGE_TAG', value: env.GIT_COMMIT),
