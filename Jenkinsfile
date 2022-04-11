@@ -24,7 +24,7 @@ pipeline {
         }
         stage ('Manifest Image Version Repository') {
             steps {
-                echo "Update manifest jobs"
+                echo "Update manifest job"
                 build job: '001-staging-updatemanifest-sosialmedia', 
                     parameters: [
                         string(name: 'IMAGE_TAG', value: env.GIT_COMMIT),
