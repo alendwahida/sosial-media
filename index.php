@@ -16,7 +16,7 @@
                     <div class="col-md-8">
                         <h1>Selamat datang di Pesbuk 2022 !!!</h1>
                         <p>Bergabunglah bersama jutaan orang lainnya...</p>
-                        <p>Yuk lah Yoi versi Baru v3.1</p>
+                        <p>Yuk lah Yoi versi Baru <b>v4.1</b></p>
                     </div>
                     <div class="col-md-4">
                         <a href="login.php" class="btn btn-secondary">Masuk</a>
